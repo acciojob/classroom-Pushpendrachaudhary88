@@ -24,12 +24,13 @@ public class StudentRepository {
     }
     public void addStudentTeacherPair(String teacherName, String studentName){
         List<String> studentsList = new ArrayList<>();
-        if(teacherstudentHashMap.containsKey(teacherName)){
+        if (teacherstudentHashMap.containsKey(teacherName)) {
             studentsList = teacherstudentHashMap.get(teacherName);
+
             studentsList.add(studentName);
-            teacherstudentHashMap.put(teacherName,studentsList);
+            teacherstudentHashMap.put(teacherName, studentsList);
         }
-        else{
+        else {
             studentsList.add(studentName);
             teacherstudentHashMap.put(teacherName,studentsList);
         }
