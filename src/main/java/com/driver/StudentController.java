@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/students")
+@RequestMapping("students")
 public class StudentController {
 
     @Autowired
@@ -37,7 +37,7 @@ public class StudentController {
 
     @PutMapping("/add-student-teacher-pair")
     public ResponseEntity<String> addStudentTeacherPair(@RequestParam String student, @RequestParam String teacher){
-        studentService.addStudentTeacherPair(teacher,teacher);
+        studentService.addStudentTeacherPair(student,teacher);
         return new ResponseEntity<>("New student-teacher pair added successfully", HttpStatus.CREATED);
     }
 

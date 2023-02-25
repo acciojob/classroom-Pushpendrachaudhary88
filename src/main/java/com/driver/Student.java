@@ -20,20 +20,20 @@ public class Student {
         return name;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public double getAverageScore() {
-        return averageScore;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
 
+    public int getAge() {
+        return age;
+    }
+
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public double getAverageScore() {
+        return averageScore;
     }
 
     public void setAverageScore(double averageScore) {
